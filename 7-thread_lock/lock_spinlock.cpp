@@ -114,6 +114,6 @@ int main() {
     sleep(1);
   }
 
-  std::cout << "DONE..." << '\n';
+  std::cout << "DONE." << '\n';
   return 0;
 }
