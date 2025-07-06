@@ -2,6 +2,28 @@
   Author: Mingzhe Wang
   Date: Jul 5, 2026
   Description:
+    ****************************************************************
+    - spinlock
+    ```c++
+      while (true) {
+        if (atomic_compare_and_swap(&spinlock.lock, 0, 1)) {
+          break;
+        }
+      }
+      // do critical part
+    ```
+    when to use: critical part is small
+
+    - mutex
+    ```c++
+      if (atomic_compare_and_swap(&mutex.lock, 1, 0)) {
+        // 线程切换,等待下一次被调用
+      }
+      // do critical part
+    ```
+    when to use: critical part is large
+
+    ****************************************************************
     solution with `spinlock` for `lock_issue.cpp`.
 
     this file shows how pthread works for the following senario:
