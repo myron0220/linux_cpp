@@ -1,6 +1,7 @@
 # MacOS
 
 # vscode
+.vscode
 
 # executable
 /bin
