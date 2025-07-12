@@ -2,10 +2,18 @@
   Author: Mingzhe Wang
   Date: Jul 5, 2026
   Description:
+    ****************************************
+    advantage of `atomic`: no lock
+
+    CAS -> Compare And Swap:
+    ```asm
+    if (a == b) {
+      a = c;
+    }
+    ```
+    ****************************************
+
     solution with `atomic` for `lock_issue.cpp`.
-    
-
-
 
     this file shows how pthread works for the following senario:
             [global_count]
